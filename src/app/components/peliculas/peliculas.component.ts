@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pelicula } from './peliculas';
+import { ApiService } from '../../services/api.service';
+import { Pelicula } from '../../models/Pelicula';
 
 @Component({
   selector: 'app-peliculas',
@@ -8,17 +9,16 @@ import { Pelicula } from './peliculas';
 })
 export class PeliculasComponent implements OnInit {
 
-  pelicula: Pelicula = {
-    title: 'Titanic',
-    language: 'English',
-    popularity: '4.5',
-    poster_path: '',
-  };
-
-  constructor() { 
+  listapeliculas!:Pelicula[];
+  
+  constructor(private apiService:ApiService) { 
   }
 
   ngOnInit(): void {
+    this.apiService.getPeliculas().subscribe(listapeliculas => {
+      this.listapeliculas = listapeliculas["results"];
+      console.log(listapeliculas)
+    });
   }
 
 
