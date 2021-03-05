@@ -27,16 +27,13 @@
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 40px;
+    height: auto;
     width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     transition: all 0.2s ease-in-out;
-    line-height: 24px;
 }
 
 .card.highlight-card {
@@ -50,25 +47,24 @@
     position: relative;
 }
 
-.skillsbuttons {
+.buttons {
     display: flex;
-    align-items: center;
-    margin-top: 200px;
+    flex-wrap: wrap;
 }
-.skillsbuttons li {
-    height: 60px;
+.buttons li {
     cursor: pointer;
     transition: all 200ms ease-in-out;
     height: auto;
     list-style: none;
     color: #fafafa;
-    padding: 20px 40px;
+    padding: 10px 20px;
     background: #1976d2;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin: 10px;
 }
-.skillsbuttons li:hover {
-    background: var(--accent);
-    color: var(--dark);
+.buttons li:hover {
+    background:  #e7e7e7;
+    color: #1976d2;
 }
 
 /* Responsive Styles */
