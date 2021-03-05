@@ -5,15 +5,20 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '../app/components/app/app.component';
 import { PeliculasComponent } from '../app/components/peliculas/peliculas.component';
+import { ListapeliculasComponent } from './components/listapeliculas/listapeliculas.component';
+import { CadapeliculaComponent } from './components/cadapelicula/cadapelicula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    ListapeliculasComponent,
+    CadapeliculaComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +27,7 @@ import { PeliculasComponent } from '../app/components/peliculas/peliculas.compon
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
