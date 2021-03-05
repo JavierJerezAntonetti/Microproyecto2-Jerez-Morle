@@ -12,13 +12,17 @@ import { AppComponent } from '../app/components/app/app.component';
 import { PeliculasComponent } from '../app/components/peliculas/peliculas.component';
 import { ListapeliculasComponent } from './components/listapeliculas/listapeliculas.component';
 import { CadapeliculaComponent } from './components/cadapelicula/cadapelicula.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarHomeComponent } from './components/navbar-home/navbar-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
     ListapeliculasComponent,
-    CadapeliculaComponent
+    CadapeliculaComponent,
+    HomeComponent,
+    NavbarHomeComponent
   ],
   imports: [
     BrowserModule,
