@@ -34,17 +34,12 @@
     display: flex;
     justify-content: center;
     transition: all 0.2s ease-in-out;
-}
-
-.card.highlight-card {
     background-color: #1976d2;
     color: white;
     font-weight: 600;
     font-size: 20px;
     border: none;
-    width: auto;
     min-width: 20%;
-    position: relative;
 }
 
 .buttons {
