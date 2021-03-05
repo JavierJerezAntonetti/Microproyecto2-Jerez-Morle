@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  peliculasUrl:string = 'https://api.themoviedb.org/3/discover/movie?api_key=48eb1c846149166ad1387928d6f75022&include_adult=false&include_video=false&page=1';
+  peliculasUrl:string = 'https://api.themoviedb.org/3/discover/movie?api_key=48eb1c846149166ad1387928d6f75022&include_adult=false&include_video=false&page=';
 
   constructor(private http:HttpClient) { }
 
-  getPeliculas():Observable<any> {
-    return this.http.get<any>(this.peliculasUrl);
+  getPeliculas(page:number):Observable<any> {
+    return this.http.get<any>(this.peliculasUrl+page);
   }
 }

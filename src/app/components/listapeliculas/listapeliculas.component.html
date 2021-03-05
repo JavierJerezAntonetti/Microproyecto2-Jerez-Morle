@@ -1,6 +1,6 @@
 <div class="content" role="main">
     <!-- Cuadro Principal -->
-    <div class="card highlight-card card-small">
+    <div class="card">
       <span>Películas</span>
     </div>
   
@@ -10,11 +10,8 @@
     </div>
 
     <!-- Cambiar Página -->
-    <div>
-      <ul class="skillsbuttons">
-        <li class="textofooter">Programación</li>
-        <li class="textofooter">Desarrollo</li>
-        <li class="textofooter">Tecnología</li>
-      </ul>
-    </div>
-  </div>
+    <ul class="buttons">
+      <li class="textofooter" (click)="res()">Anterior</li>
+      <li class="textofooter" (click)="sum()">Siguiente</li>
+    </ul>
+</div>
