@@ -8,15 +8,9 @@ import { AuthService } from 'src/app/services/auth.service'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public _as: AuthService) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ingresar(proveedor: string){
-    console.log(proveedor);
-
-    this._as.login();
   }
 
 }

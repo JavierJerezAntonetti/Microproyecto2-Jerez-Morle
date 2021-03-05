@@ -1,22 +1,61 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from './user';
+
 import { AngularFireAuth } from '@angular/fire/auth';
-import firebase from 'firebase/app';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
+import firebase  from 'firebase/app';
 
-@Injectable({
-  providedIn: 'root'
-})
+import { Observable, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
+@Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  public usuario: any = {};
+    user$: Observable< User | any >;
 
-  constructor(public auth: AngularFireAuth) { }
+    constructor(
+        private afAuth: AngularFireAuth,
+        private afs: AngularFirestore,
+        private router: Router
+    ) { 
+      this.user$ = this.afAuth.authState.pipe(
+        switchMap(user => {
+          // Logged in
+        if (user) {
+          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+        } else {
+          // Logged out
+          return of(null);
+        }
+      })
+      )
+    }
 
-  login() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
-  logout() {
-    this.auth.signOut();
-  }
+    async googleSignin() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const credential = await this.afAuth.auth.signInWithPopup(provider);
+      return this.updateUserData(credential.user);
+    }
+  
+    private updateUserData(user: User) {
+      // Sets user data to firestore on login
+      const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+  
+      const data = { 
+        uid: user.uid, 
+        email: user.email, 
+        displayName: user.displayName, 
+      } 
+  
+      return userRef.set(data, { merge: true })
+  
+    }
+  
+    async signOut() {
+      await this.fireAuth.signOut()
+      this.router.navigate(['/']);
+    }
 
 }
