@@ -5,8 +5,9 @@ import {ListapeliculasComponent} from './components/listapeliculas/listapelicula
 
 const routes: Routes = [
 
-  {path: '', component: HomeComponent},
-  {path: '', component: ListapeliculasComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'home', component: HomeComponent},
+  {path: 'listado-peliculas', component: ListapeliculasComponent}
 
 ];
 
