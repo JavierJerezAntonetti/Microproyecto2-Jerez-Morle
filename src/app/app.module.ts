@@ -9,11 +9,13 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '../app/components/app/app.component';
 import { PeliculasComponent } from '../app/components/peliculas/peliculas.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
