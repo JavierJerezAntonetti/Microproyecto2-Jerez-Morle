@@ -15,7 +15,7 @@ export class PeliculasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.apiService.getPeliculas(1).subscribe(listapeliculas => {
+    this.apiService.getPeliculas().subscribe(listapeliculas => {
       this.listapeliculas = listapeliculas["results"];
       console.log(listapeliculas)
     });
