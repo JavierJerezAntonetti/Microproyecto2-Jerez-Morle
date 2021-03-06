@@ -14,6 +14,7 @@ import { ListapeliculasComponent } from './components/listapeliculas/listapelicu
 import { CadapeliculaComponent } from './components/cadapelicula/cadapelicula.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarHomeComponent } from './components/navbar-home/navbar-home.component';
+import { PeliculaDetailComponent } from './components/pelicula-detail/pelicula-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavbarHomeComponent } from './components/navbar-home/navbar-home.compon
     ListapeliculasComponent,
     CadapeliculaComponent,
     HomeComponent,
-    NavbarHomeComponent
+    NavbarHomeComponent,
+    PeliculaDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -21,5 +21,4 @@ export class PeliculasComponent implements OnInit {
     });
   }
 
-
 }
