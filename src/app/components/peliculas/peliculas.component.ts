@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
-import { Pelicula } from 'src/app/models/Pelicula';
+import { ApiService } from '../../services/api/api.service';
+import { Pelicula } from '../../models/Pelicula';
 
 @Component({
   selector: 'app-peliculas',
