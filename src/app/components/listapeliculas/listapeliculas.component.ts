@@ -34,6 +34,7 @@ export class ListapeliculasComponent implements OnInit {
   @ViewChild('nombrenuevo') nombrenuevo!:ElementRef;
   
   getnombrenuevo(){
+    
     this.nombre = this.nombrenuevo.nativeElement.value;
     this.ngOnInitpornombre()
   }

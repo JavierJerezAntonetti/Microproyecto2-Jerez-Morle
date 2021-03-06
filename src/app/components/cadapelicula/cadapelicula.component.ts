@@ -14,4 +14,11 @@ export class CadapeliculaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getid(event: any) {
+    var target = event.target || event.srcElement || event.currentTarget;
+    var idAttr = target.attributes.id;
+    var value = idAttr.nodeValue;
+    console.log(value)
+  }
+
 }

@@ -3,4 +3,5 @@ export class Pelicula {
     original_language:string | undefined;
     popularity:number | undefined;
     poster_path:string | undefined;
+    id:number | undefined;
   }
