@@ -11,7 +11,7 @@
 
 .card-small {
   border-radius: 10px;
-  border: 1px solid #949494;
+  border: 1px solid black;
   background-color: #e2e2e2;
   height: auto;
   width: 200px;
@@ -27,7 +27,7 @@
 }
 
 .card-small:hover {
-    background-color: #1976d2;
-    color:#e2e2e2;
+    background-color: rgb(170, 15, 15) ;
+    color: white;
     cursor: pointer;
 }
