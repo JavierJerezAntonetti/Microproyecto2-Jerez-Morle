@@ -1,0 +1,23 @@
+<div class="content" role="main">
+  <!-- Cuadro Principal -->
+  <div class="card">
+    <span>Lista de Películas</span>
+  </div>
+
+  <!-- Buscar por Nombre -->
+    <div class="input-with-button">
+      <input #nombrenuevo type="text" class="form-control" placeholder="Nombre" value=""/>
+      <button class="enviar" (click)="getnombrenuevo()">Buscar</button>
+    </div>
+
+  <!-- Lista de Películas -->
+  <div class="card-container">
+    <app-cadapelicula *ngFor="let pelicula of listapeliculas" [pelicula]="pelicula"></app-cadapelicula>
+  </div>
+
+  <!-- Cambiar Página -->
+  <ul class="buttons">
+    <li class="textofooter" (click)="res()">Anterior</li>
+    <li class="textofooter" (click)="sum()">Siguiente</li>
+  </ul>
+</div>

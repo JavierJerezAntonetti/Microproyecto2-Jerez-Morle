@@ -1,5 +1,8 @@
-<h3>{{pelicula.title | uppercase }} Details</h3>
-<div> <img src="" alt=""> </div>
-<div><span>Title: </span>{{pelicula.title}}</div>
-<div><span>Language: </span>{{pelicula.language}}</div>
-<div><span>Popularity: </span>{{pelicula.popularity}}</div>
+<div class="content" role="main">
+    
+    <!-- Lista de Películas -->
+    <div class="card-container">
+      <app-cadapelicula *ngFor="let pelicula of listapeliculas.slice(0,9)" [pelicula]="pelicula"></app-cadapelicula>
+    </div>
+
+</div>

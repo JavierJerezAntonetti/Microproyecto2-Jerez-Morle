@@ -1,0 +1,13 @@
+<div>
+    <a routerLink='/detail'target="_blank" style="text-decoration: none; color:inherit" >
+    <div (click)="getid($event)" class="card-small" id="{{ pelicula.id }}">
+        
+        <span id="{{ pelicula.id }}" class="titulo-movie">{{ pelicula.original_title }}</span>
+        <img id="{{ pelicula.id }}" class="imagen" src="https://www.themoviedb.org/t/p/w220_and_h330_face/{{ pelicula.poster_path }}">
+        <span id="{{ pelicula.id }}" class="footer-movie">Idioma: {{ pelicula.original_language }}</span>
+        <span id="{{ pelicula.id }}" class="footer-movie">Popularidad: {{ pelicula.popularity }}</span>
+    
+    </div>
+    </a>
+
+</div>
