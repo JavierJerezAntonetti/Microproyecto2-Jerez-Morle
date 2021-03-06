@@ -34,7 +34,6 @@ export class ListapeliculasComponent implements OnInit {
   @ViewChild('nombrenuevo') nombrenuevo!:ElementRef;
   
   getnombrenuevo(){
-    
     this.nombre = this.nombrenuevo.nativeElement.value;
     this.ngOnInitpornombre()
   }
@@ -52,10 +51,10 @@ export class ListapeliculasComponent implements OnInit {
       console.log(listapeliculas)
     });
   }
-
+  
   ngOnInitdetalle(): void {
     this.apiService.getDetalles(this.id).subscribe(listapeliculas => {
-      this.listapeliculas = listapeliculas;
+      this.listapeliculas = listapeliculas["results"];
       console.log(listapeliculas)
     });
   }
