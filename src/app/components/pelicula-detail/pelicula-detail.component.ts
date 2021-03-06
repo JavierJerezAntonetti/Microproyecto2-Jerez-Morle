@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { ApiService } from '../../services/api.service';
+
 
 @Component({
   selector: 'app-pelicula-detail',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeliculaDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private ApiService: ApiService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
+  
 }

@@ -2,7 +2,12 @@
     
     <!-- Lista de Películas -->
     <div class="card-container">
-      <app-cadapelicula *ngFor="let pelicula of listapeliculas.slice(0,9)" [pelicula]="pelicula"></app-cadapelicula>
+      <app-cadapelicula *ngFor="let pelicula of listapeliculas.slice(0,9)" [pelicula]="pelicula">
+
+        <a routerLink="/detail/{{pelicula.id}}">
+        </a>
+
+      </app-cadapelicula>
     </div>
 
 </div>
