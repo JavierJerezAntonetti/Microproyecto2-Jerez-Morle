@@ -11,5 +11,4 @@ export class PeliculaDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
