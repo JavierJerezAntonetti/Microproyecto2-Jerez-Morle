@@ -1,8 +1,4 @@
-.titulo-movie {
-    font-weight: bold;
-    font-size: x-large;
-    margin-bottom: 10px;
-}
+
 
 .footer-movie {
     margin-top: 10px;
@@ -24,6 +20,19 @@
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   font-size: medium;
+
+    a{
+        /*Lo intentamos, angular no sirve*/
+        text-decoration: none;
+        color: inherit;
+    } 
+
+    .titulo-movie {
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+
 }
 
 .card-small:hover {
