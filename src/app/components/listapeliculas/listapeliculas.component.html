@@ -5,12 +5,10 @@
   </div>
 
   <!-- Buscar por Nombre -->
-  <form name = "myForm" (submit)="nombrenuevo($event)">
     <div class="input-with-button">
-        <input class="inputnombre" name="nombreinput" value="" required>
-        <input class="enviar" type="submit" value="Buscar">
+      <input #nombrenuevo type="text" class="form-control" placeholder="Nombre" value=""/>
+      <button class="enviar" (click)="getnombrenuevo()">Buscar</button>
     </div>
-  </form>
 
   <!-- Lista de Películas -->
   <div class="card-container">
