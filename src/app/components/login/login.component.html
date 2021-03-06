@@ -1,15 +1,27 @@
-<div class="row">
-
-    <div class="col-md-12 text-center">
-
-        <p>
-            Ingrese con su cuenta de Google
-        </p>
-
-        <button type="button" class="btn btn-outline-primary" (click)="ingresar('google')">
-            Google
-        </button>
-
-    </div>
+<div *ngIf="auth.user$ | async; then authenticated else guest">
 
 </div>
+
+<!-- User NOT logged in -->
+<div class="log-in">
+
+    <ng-template #guest>
+    <p>Log In</p>
+    <button (click)="auth.googleSignin()">
+        <i class="fa fa-google"></i> Connect Google
+    </button>
+    
+    </ng-template>
+
+</div>
+
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+<div *ngIf="auth.user$ | async as user">
+    <h3>Howdy, {{ user.displayName }}</h3>
+    <p>UID: {{ user.uid }}</p>
+    <button (click)="auth.signOut()">Logout</button>
+</div>
+</ng-template>
