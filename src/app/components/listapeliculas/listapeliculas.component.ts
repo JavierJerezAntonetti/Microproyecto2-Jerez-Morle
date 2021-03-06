@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../../services/api/api.service';
 import { Pelicula } from '../../models/Pelicula';
 import { ChildActivationStart } from '@angular/router';
@@ -31,8 +31,10 @@ export class ListapeliculasComponent implements OnInit {
     }
   }
 
-  nombrenuevo(event: any){
-    this.nombre = event.target.nombreinput.value;
+  @ViewChild('nombrenuevo') nombrenuevo!:ElementRef;
+  
+  getnombrenuevo(){
+    this.nombre = this.nombrenuevo.nativeElement.value;
     this.ngOnInitpornombre()
   }
 
