@@ -1,26 +1,25 @@
 <div class="content" role="main">
+  <!-- Cuadro Principal -->
+  <div class="card">
+    <span>Lista de Películas</span>
+  </div>
 
-    <!-- Cuadro Principal -->
-    <div class="card">
-      <span>Lista de Películas</span>
+  <!-- Buscar por Nombre -->
+  <form name = "myForm" (submit)="nombrenuevo($event)">
+    <div class="input-with-button">
+        <input class="inputnombre" name="nombreinput" value="" required>
+        <input class="enviar" type="submit" value="Buscar">
     </div>
-  
-    <!-- Buscar por Nombre -->
-    <form name = "myForm" onsubmit = "return(validate());">
-      <div class="input-with-button">
-          <input type="text" name="name" placeholder="Nombre" required>
-          <input class="enviar" type="submit" value="Buscar">
-      </div>
   </form>
 
-    <!-- Lista de Películas -->
-    <div class="card-container">
-      <app-cadapelicula *ngFor="let pelicula of listapeliculas" [pelicula]="pelicula"></app-cadapelicula>
-    </div>
+  <!-- Lista de Películas -->
+  <div class="card-container">
+    <app-cadapelicula *ngFor="let pelicula of listapeliculas" [pelicula]="pelicula"></app-cadapelicula>
+  </div>
 
-    <!-- Cambiar Página -->
-    <ul class="buttons">
-      <li class="textofooter" (click)="res()">Anterior</li>
-      <li class="textofooter" (click)="sum()">Siguiente</li>
-    </ul>
+  <!-- Cambiar Página -->
+  <ul class="buttons">
+    <li class="textofooter" (click)="res()">Anterior</li>
+    <li class="textofooter" (click)="sum()">Siguiente</li>
+  </ul>
 </div>

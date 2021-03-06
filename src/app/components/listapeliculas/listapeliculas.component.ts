@@ -31,8 +31,9 @@ export class ListapeliculasComponent implements OnInit {
     }
   }
 
-  nombrenuevo(nuevo:string){
-    this.nombre = nuevo
+  nombrenuevo(event: any){
+    this.nombre = event.target.nombreinput.value;
+    this.ngOnInitpornombre()
   }
 
   ngOnInit(): void {

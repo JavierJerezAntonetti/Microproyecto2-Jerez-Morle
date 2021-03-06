@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  peliculasUrl:string = 'https://api.themoviedb.org/3/discover/movie?api_key=48eb1c846149166ad1387928d6f75022&include_adult=false&include_video=false&page=';
+  peliculasUrl:string = 'https://api.themoviedb.org/3/discover/movie?api_key=48eb1c846149166ad1387928d6f75022&page=';
   pornombreUrl:string = 'https://api.themoviedb.org/3/search/movie?api_key=48eb1c846149166ad1387928d6f75022&query='
   detalleUrl:string = 'https://api.themoviedb.org/3/movie/587807'
   api_key:string = '?api_key=48eb1c846149166ad1387928d6f75022'
