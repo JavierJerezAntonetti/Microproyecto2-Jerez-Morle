@@ -1,6 +1,6 @@
 export class Pelicula {
-    original_title!:string;
-    original_language!:string;
-    popularity!:number;
-    poster_path!:string;
+    original_title:string | undefined;
+    original_language:string | undefined;
+    popularity:number | undefined;
+    poster_path:string | undefined;
   }
