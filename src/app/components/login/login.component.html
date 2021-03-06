@@ -6,6 +6,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
 
+
 <form method="post" action="index.html">
 <div class="log-in">
 <h1>Log In With Google</h1>
@@ -14,10 +15,8 @@
 <p>Log In</p>
 
 <button class="btn" (click)="auth.googleSignin()">
-    <i class="fa fa-google"></i> Connect Google
-    <a routerLink='/home' class="active"></a>
+    <i class="fa fa-google"></i> Connect Google 
 </button>
-
 
 
 </ng-template>
@@ -30,9 +29,10 @@
 <!-- User logged in -->
 <ng-template #authenticated>
 <div *ngIf="auth.user$ | async as user">
-
+    <a routerLink='/home'></a>
+    <button (click)="auth.signOut()">Logout</button>
     <router-outlet></router-outlet>
 
-    <!-- <button (click)="auth.signOut()">Logout</button>  -->  
 </div>
 </ng-template>
+

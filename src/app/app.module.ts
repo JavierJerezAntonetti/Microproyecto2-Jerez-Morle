@@ -25,7 +25,7 @@ import { PeliculaDetailComponent } from './components/pelicula-detail/pelicula-d
     CadapeliculaComponent,
     HomeComponent,
     NavbarHomeComponent,
-    LoginComponent
+    LoginComponent,
     PeliculaDetailComponent
   ],
   imports: [
